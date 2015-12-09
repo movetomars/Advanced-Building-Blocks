@@ -4,18 +4,17 @@ def bubblesort(nums)
     n = nums.length
 
     (n - 1).times do loop
-        nums.each_with_index do |int, index|
+        nums.each do |int|
             
-            if (int[index] <=> int[index + 1]) == 1
-                int[index] = int[index + 1]
-                int[index + 1] = int[index]
+            if (int[i] > int[i + 1])
+                int[i], int[i + 1] = int[i + 1], int[i]
 
             end
         end
     
     end
 
-    print nums
+    return nums
 end
 
 puts "Enter the integers you'd like to sort, separated by commas."
