@@ -1,24 +1,17 @@
 def bubblesort(nums)
-
-    nums = nums.map(&:to_i)
-    n = nums.length
-
-    (n - 1).times do loop
-        nums.each do |int|
-            
-            if (int[i] > int[i + 1])
-                int[i], int[i + 1] = int[i + 1], int[i]
-
-            end
-        end
     
+    (0..nums.size-1).each do |i|
+            
+        if nums[i] > nums[i + 1]
+                nums[i], nums[i + 1] = nums[i + 1], nums[i]
+        end
     end
 
     return nums
 end
 
-puts "Enter the integers you'd like to sort, separated by commas."
+bubblesort([ 89, 6, 2, 49, 0, 4, 7 ])
 
-nums = gets.chomp.gsub(/\s+/, "").split(",")
+def bubblesort_by()
 
-puts bubblesort(nums)
+end
