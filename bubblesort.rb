@@ -18,6 +18,10 @@ end
 
 puts bubblesort([ 89, 6, 2, 49, 0, 4, 7 ])
 
-def bubblesort_by()
-
+def bubblesort_by(arr)
+    if x <=> y == 1
+        x, y = y, x
+    end
 end
+
+puts bubblesort_by(["what", "do", "you", "think", "you're", "doing"]) {|x, y| x.length - y.length}
