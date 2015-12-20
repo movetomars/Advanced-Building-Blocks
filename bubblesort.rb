@@ -33,4 +33,4 @@ def bubblesort_by(arr)
     arr
 end
 
-puts bubblesort_by(["what", "do", "you", "think", "you're", "doing"]) {|x,y| y.to_s.length - x.to_s.length}
+puts bubblesort_by(["what", "do", "you", "think", "you're", "doing"]) {|y,x| y.to_s.length - x.to_s.length}
