@@ -56,6 +56,32 @@ def my_none?
 end
 
 def my_count(*args, &block)
+    count = 0
+    
+    self.my_each do |i|
+        if args.empty? && !block_given?
+            count += 1
+        elsif block_given?
+            count += 1 if yield(i)
+        else
+            count += 1 if i.include? args
+        end
+    end
+    
+    return count
+end
+
+def my_map
+    new = []
+    
+    self.my_each do |i|
+        new << yield(i)
+    end
+    
+    new
+end
+
+def my_inject
 
 end
 
