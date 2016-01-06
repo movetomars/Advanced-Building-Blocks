@@ -82,7 +82,29 @@ def my_map
 end
 
 def my_inject
+    total = self.first
+    
+    self.my_each_with_index do |val, i|
+        total = yield(val, i)
+    end
+    total
+end
 
+def multiply_els
+    self.my_inject{|x, y| x * y}
+end
+
+def my_map_proc(proc)
+    new = []
+    
+    self.my_each do |i|
+        if proc && block_given?
+             new << proc.call(yield(i))
+        else
+             new << proc.call(i)
+        end
+    end
+    new
 end
 
 end
